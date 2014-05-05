@@ -1,3 +1,8 @@
+$page-width: 640px
+
+$header-width: 9.5em
+$header-height: 5em
+
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata)
@@ -27,25 +32,16 @@ body
 ::-moz-selection
     background: #F4D03F
 
-h1, h2, h3, h4, h5, h6
-    font-family: "Montserrat", Verdana, Geneva, sans-serif
-
-h1
-    font-size: 2em
-
-    a
-        color: #22313F
-        text-decoration: none
-
-#header
+#header h1
+    text-indent: -9999px
     position: fixed
-    top: 1em
+    top: .5em
     right: 1em
     content: " "
     background: url("/static/vector/logo.svg")
-    width: 14.25em
-    height: 7.5em
-    background-size: 14.25em 7.5em
+    width: $header-width
+    height: $header-height
+    background-size: $header-width $header-height
 
 article
     header
@@ -88,7 +84,7 @@ article
 
     section
         img
-            max-width: 640px
+            max-width: $page-width
 
         a
             color: #1E8BC3
@@ -114,7 +110,6 @@ article + article
     position: absolute
     left: 0
     bottom: 0
-    width: 100%
 
     a
         color: #F2F1EF
@@ -136,13 +131,23 @@ article + article
             padding-left: 1em
 
 #footer > div
-    width: 640px
+    width: $page-width
     margin-left: 20%
 
 #body
-    width: 640px
+    width: $page-width
     margin-left: 20%
     margin-top: 4em
+
+    h1, h2, h3, h4, h5, h6
+        font-family: "Montserrat", Verdana, Geneva, sans-serif
+
+    h1
+        font-size: 2em
+
+        a
+            color: #22313F
+            text-decoration: none
 
     section
         & > p, li, blockquote
@@ -180,3 +185,38 @@ article + article
 
             border: 0
             margin: 4em 0
+
+@media (max-width: $page-width * 2 + 128px * 2) // 128px == 20% of $page-width
+    #header
+        width: $page-width
+        margin:
+            top: 2em
+            left: auto
+            right: auto
+
+        h1
+            position: static
+
+    #footer > div, #body
+        margin:
+            left: auto
+            right: auto
+
+@media (max-width: $page-width) // Oh, man, just buy a bigger screen... :(
+    #body
+        width: auto
+
+    #header
+        width: auto
+
+        h1
+            width: auto
+            background-repeat: no-repeat
+
+    article section
+        img
+            max-width: 100%
+            max-height: auto
+
+    #footer > div
+        width: auto
