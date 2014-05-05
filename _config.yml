@@ -2,3 +2,6 @@ title: "daGrev.is"
 permalink: "/:year/:month/:title"
 markdown: redcarpet
 pygments: true
+url: "http://dagrev.is/"
+author: "Raitis (daGrevis) Stengrevics"
+author_bio: "Hacker, engineer and blogger"

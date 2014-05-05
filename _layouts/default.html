@@ -18,7 +18,9 @@
     </head>
     <body>
         <header id="header">
-            <h1>{{ site.title }}</h1>
+            <a href="{{ site.url }}">
+                <h1>{{ site.title }}</h1>
+            </a>
         </header>
 
         <div id="body">
@@ -29,14 +31,14 @@
 
         <footer id="footer">
             <div>
-                <p><strong><a href="#">Raitis (daGrevis) Stengrevics</a></strong> <em>Hacker, engineer and blogger</em></p>
+                <p><strong><a href="#">{{ site.author }}</a></strong> <em>Hacker, engineer and blogger</em></p>
 
                 <nav>
                     <ul>
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Credits</a></li>
-                        <li><a href="#">Source code</a></li>
+                        <li><a href="{{ site.url }}about-me">About me</a></li>
+                        <li><a href="{{ site.url }}contacts">Contacts</a></li>
+                        <li><a href="{{ site.url }}credits">Credits</a></li>
+                        <li><a href="https://github.com/daGrevis/daGrev.is">Source code</a></li>
                     </ul>
                 </nav>
             </div>
