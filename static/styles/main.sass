@@ -213,10 +213,22 @@ article + article
             width: auto
             background-repeat: no-repeat
 
-    article section
-        img
-            max-width: 100%
-            max-height: auto
+    article
+        section
+            img
+                max-width: 100%
+                max-height: auto
+
+        footer
+            ul
+                li
+                    display: block
+                li + li
+                    margin-top: 2em
 
     #footer > div
         width: auto
+
+    #footer
+        em
+            display: block

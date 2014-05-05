@@ -170,6 +170,13 @@ article + article {
   article section img {
     max-width: 100%;
     max-height: auto; }
+  article footer ul li {
+    display: block; }
+  article footer ul li + li {
+    margin-top: 2em; }
 
   #footer > div {
-    width: auto; } }
+    width: auto; }
+
+  #footer em {
+    display: block; } }
