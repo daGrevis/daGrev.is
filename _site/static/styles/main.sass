@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
+
+@import url(http://fonts.googleapis.com/css?family=Inconsolata)
+
+@font-face
+    font-family: "Franklin Gothic FS Book"
+    src: url("/static/fonts/FranklinGothic-Book.eot")
+    src: url("/static/fonts/FranklinGothic-Book.eot?#iefix") format("embedded-opentype"), url("/static/fonts/FranklinGothic-Book.woff") format("woff"), url("/static/fonts/FranklinGothic-Book.ttf") format("truetype"), url("/static/fonts/FranklinGothic-Book.svg#webfont") format("svg")
+
+@font-face
+    font-family: "Franklin Gothic FS Book"
+    src: url("/static/fonts/FranklinGothic-BookIt.eot")
+    src: url("/static/fonts/FranklinGothic-BookIt.eot?#iefix") format("embedded-opentype"), url("/static/fonts/FranklinGothic-BookIt.woff") format("woff"), url("/static/fonts/FranklinGothic-BookIt.ttf") format("truetype"), url("/static/fonts/FranklinGothic-BookIt.svg#webfont") format("svg")
+    font-style: italic
+
+html
+    position: relative
+    min-height: 100%
+
+body
+    font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif
+    color: #22313F
+    margin-bottom: 16em
+
+::selection
+    background: #F4D03F
+::-moz-selection
+    background: #F4D03F
+
+h1, h2, h3, h4, h5, h6
+    font-family: "Montserrat", Verdana, Geneva, sans-serif
+
+h1
+    font-size: 2em
+
+    a
+        color: #22313F
+        text-decoration: none
+
+#header
+    position: fixed
+    top: 1em
+    right: 1em
+    content: " "
+    background: url("/static/vector/logo.svg")
+    width: 14.25em
+    height: 7.5em
+    background-size: 14.25em 7.5em
+
+article
+    header
+        h1, time
+            display: inline
+
+        time
+            color: #BDC3C7
+            font-size: 1.2em
+            padding-left: .5em
+
+    footer
+        margin-top: 4em
+
+        ul
+            margin-bottom: 6em
+            list-style: none
+            padding-left: 0
+
+            li
+                display: inline
+
+                a
+                    text-decoration: none
+                    font-size: 1.2em
+                    color: #F2F1EF
+                    padding: .5em 1em
+
+                .twitter
+                    background: #55ACEE
+
+                .google-plus
+                    background: #DD4B39
+
+                .hacker-news
+                    background: #FF8937
+
+                .lobsters
+                    background: #ac120d
+
+    section
+        img
+            max-width: 640px
+
+        a
+            color: #1E8BC3
+            font-weight: bold
+        a:visited
+            color: #2574A9
+
+#disqus_thread
+    a
+        color: #1E8BC3
+
+article + article
+    margin-top: 4em
+
+#footer
+    background: #1E8BC3
+    color: #F2F1EF
+    width: 100%
+    margin-top: 6em
+    font-size: 1.2em
+    padding-top: 2em
+    padding-bottom: 1em
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+
+    a
+        color: #F2F1EF
+        text-decoration: none
+
+    strong
+        padding-right: 1em
+        letter-spacing: .05em
+
+    ul
+        list-style: none
+        padding-left: 0
+        font-size: .9em
+
+        li
+            display: inline
+
+        li + li
+            padding-left: 1em
+
+#footer > div
+    width: 640px
+    margin-left: 20%
+
+#body
+    width: 640px
+    margin-left: 20%
+    margin-top: 4em
+
+    section
+        & > p, li, blockquote
+            font-size: 1.4em
+            line-height: 1.4em
+
+        ul
+            padding-left: 1.5em
+
+        ol
+            padding-left: 2em
+
+        blockquote
+            color: #95A5A6
+
+        code
+            font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace
+            margin: 0 .25em
+            font-size: .8em
+
+        pre
+            padding: 2em
+
+            code
+                line-height: 1.4em
+                margin: 0
+                font-size: .8em
+
+        hr
+            &:before
+                content: "* * *"
+                font-size: 1.4em
+                letter-spacing: .5em
+                color: #BDC3C7
+
+            border: 0
+            margin: 4em 0
