@@ -36,33 +36,32 @@
 
         <section>
 
-            <p>Hello and welcome to my blog! It&#39;s based on <a href="http://jekyllrb.com">Jekyll</a> and
+            <p>Hello and welcome to my blog! It’s based on <a href="http://jekyllrb.com">Jekyll</a> and
 seems to be working fine.</p>
 
 <p>Once I wrote Quicksort in Clojure; you should see it!</p>
 
-<div class="highlight"><pre><code class="clojure"><span class="p">(</span><span class="kd">defn </span><span class="nv">pivot-and-rest</span> <span class="p">[</span><span class="nv">coll</span><span class="p">]</span>
-  <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">splitted</span> <span class="p">(</span><span class="nb">split-at </span><span class="p">(</span><span class="nb">quot </span><span class="p">(</span><span class="nb">count </span><span class="nv">coll</span><span class="p">)</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">coll</span><span class="p">)</span>
-        <span class="nv">second-part</span> <span class="p">(</span><span class="nb">second </span><span class="nv">splitted</span><span class="p">)]</span>
-    <span class="p">[(</span><span class="nb">first </span><span class="nv">second-part</span><span class="p">)</span> <span class="p">(</span><span class="nb">concat </span><span class="p">(</span><span class="nb">first </span><span class="nv">splitted</span><span class="p">)</span> <span class="p">(</span><span class="nb">rest </span><span class="nv">second-part</span><span class="p">))]))</span>
+<div class="highlight"><pre><code class="clojure"><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">pivot-and-rest</span><span class="w"> </span><span class="p">[</span><span class="n">coll</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">[</span><span class="n">splitted</span><span class="w"> </span><span class="p">(</span><span class="nb">split-at</span><span class="w"> </span><span class="p">(</span><span class="nb">quot</span><span class="w"> </span><span class="p">(</span><span class="nb">count</span><span class="w"> </span><span class="n">coll</span><span class="p">)</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="n">coll</span><span class="p">)</span><span class="w">
+        </span><span class="n">second-part</span><span class="w"> </span><span class="p">(</span><span class="nb">second</span><span class="w"> </span><span class="n">splitted</span><span class="p">)]</span><span class="w">
+    </span><span class="p">[(</span><span class="nb">first</span><span class="w"> </span><span class="n">second-part</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">concat</span><span class="w"> </span><span class="p">(</span><span class="nb">first</span><span class="w"> </span><span class="n">splitted</span><span class="p">)</span><span class="w"> </span><span class="p">(</span><span class="nb">rest</span><span class="w"> </span><span class="n">second-part</span><span class="p">))]))</span><span class="w">
 
-<span class="p">(</span><span class="kd">defn </span><span class="nv">quicksort</span> <span class="p">[</span><span class="nv">coll</span><span class="p">]</span>
-  <span class="p">(</span><span class="nf">cond</span>
-    <span class="p">(</span><span class="nf">empty?</span> <span class="nv">coll</span><span class="p">)</span> <span class="p">[]</span>
-    <span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nb">count </span><span class="nv">coll</span><span class="p">)</span> <span class="mi">1</span><span class="p">)</span> <span class="nv">coll</span>
-    <span class="ss">:else</span> <span class="p">(</span><span class="k">let </span><span class="p">[[</span><span class="nv">p</span> <span class="nv">xs</span><span class="p">]</span> <span class="p">(</span><span class="nf">pivot-and-rest</span> <span class="nv">coll</span><span class="p">)</span>
-                <span class="p">{</span><span class="nv">lesser</span> <span class="nv">true</span> <span class="nv">greater</span> <span class="nv">false</span><span class="p">}</span> <span class="p">(</span><span class="nf">group-by</span> <span class="o">#</span><span class="p">(</span><span class="nb">&lt; </span><span class="nv">%</span> <span class="nv">p</span><span class="p">)</span> <span class="nv">xs</span><span class="p">)]</span>
-      <span class="p">(</span><span class="nb">concat </span><span class="p">(</span><span class="nf">quicksort</span> <span class="nv">lesser</span><span class="p">)</span> <span class="p">[</span><span class="nv">p</span><span class="p">]</span> <span class="p">(</span><span class="nf">quicksort</span> <span class="nv">greater</span><span class="p">)))</span>
-  <span class="p">))</span>
+</span><span class="p">(</span><span class="k">defn</span><span class="w"> </span><span class="n">quicksort</span><span class="w"> </span><span class="p">[</span><span class="n">coll</span><span class="p">]</span><span class="w">
+  </span><span class="p">(</span><span class="k">cond</span><span class="w">
+    </span><span class="p">(</span><span class="nf">empty?</span><span class="w"> </span><span class="n">coll</span><span class="p">)</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">(</span><span class="nb">count</span><span class="w"> </span><span class="n">coll</span><span class="p">)</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">coll</span><span class="w">
+    </span><span class="no">:else</span><span class="w"> </span><span class="p">(</span><span class="k">let</span><span class="w"> </span><span class="p">[[</span><span class="n">p</span><span class="w"> </span><span class="n">xs</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="nf">pivot-and-rest</span><span class="w"> </span><span class="n">coll</span><span class="p">)</span><span class="w">
+                </span><span class="p">{</span><span class="n">lesser</span><span class="w"> </span><span class="n">true</span><span class="w"> </span><span class="n">greater</span><span class="w"> </span><span class="n">false</span><span class="p">}</span><span class="w"> </span><span class="p">(</span><span class="nf">group-by</span><span class="w"> </span><span class="o">#</span><span class="p">(</span><span class="nb">&lt;</span><span class="w"> </span><span class="n">%</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="n">xs</span><span class="p">)]</span><span class="w">
+      </span><span class="p">(</span><span class="nb">concat</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="n">lesser</span><span class="p">)</span><span class="w"> </span><span class="p">[</span><span class="n">p</span><span class="p">]</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="n">greater</span><span class="p">)))</span><span class="w">
+  </span><span class="p">))</span><span class="w">
 
-<span class="p">(</span><span class="nb">assert </span><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nf">quicksort</span> <span class="p">[])</span> <span class="p">[]))</span>
-<span class="p">(</span><span class="nb">assert </span><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nf">quicksort</span> <span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="p">(</span><span class="nb">assert </span><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nf">quicksort</span> <span class="p">[</span><span class="mi">2</span> <span class="mi">1</span> <span class="mi">3</span><span class="p">])</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]))</span>
-<span class="p">(</span><span class="nb">assert </span><span class="p">(</span><span class="nb">= </span><span class="p">(</span><span class="nf">quicksort</span> <span class="p">[</span><span class="mi">2</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span><span class="p">])</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span><span class="p">]))</span>
-</code></pre></div>
+</span><span class="p">(</span><span class="nb">assert</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="p">[])</span><span class="w"> </span><span class="p">[]))</span><span class="w">
+</span><span class="p">(</span><span class="nb">assert</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span><span class="w">
+</span><span class="p">(</span><span class="nb">assert</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="p">]))</span><span class="w">
+</span><span class="p">(</span><span class="nb">assert</span><span class="w"> </span><span class="p">(</span><span class="nb">=</span><span class="w"> </span><span class="p">(</span><span class="nf">quicksort</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="mi">3</span><span class="p">])</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="mi">4</span><span class="p">]))</span></code></pre></div>
 
-<p>I&#39;m thinking of <a href="https://dagrev.is">daGrev.is</a> as domain name for this blog.
-It&#39;s a top-level domain name for Iceland.</p>
+<p>I’m thinking of <a href="https://dagrev.is">daGrev.is</a> as domain name for this blog.
+It’s a top-level domain name for Iceland.</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nec
 fermentum lacus, eget consectetur turpis. Donec gravida ac odio quis vehicula.
@@ -71,14 +70,14 @@ senectus et netus et malesuada fames ac turpis egestas. Quisque rutrum dapibus
 rutrum.</p>
 
 <ul>
-<li>IV: A New Hope</li>
-<li>V: The Empire Strikes Back</li>
-<li>VI: Return of the Jedi</li>
-<li>I: The Phantom Menace</li>
-<li>II: Attack of the Clones</li>
-<li>III: Revenge of the Sith</li>
-<li>The Clone Wars</li>
-<li>VII <em>(authors didn&#39;t give it a name)</em></li>
+  <li>IV: A New Hope</li>
+  <li>V: The Empire Strikes Back</li>
+  <li>VI: Return of the Jedi</li>
+  <li>I: The Phantom Menace</li>
+  <li>II: Attack of the Clones</li>
+  <li>III: Revenge of the Sith</li>
+  <li>The Clone Wars</li>
+  <li>VII <em>(authors didn’t give it a name)</em></li>
 </ul>
 
 <p>P.S. I know nothing about Stars Wars.</p>
@@ -90,18 +89,28 @@ Markdown lists look like, well, lists. Even blockquotes look like quoted
 passages of text, assuming you’ve ever used email.</p>
 
 <ol>
-<li><p>I: The Phantom Menace</p></li>
-<li><p>II: Attack of the Clones</p></li>
-<li><p>III: Revenge of the Sith</p></li>
-<li><p>IV: A New Hope</p></li>
-<li><p>V: The Empire Strikes Back</p></li>
+  <li>
+    <p>I: The Phantom Menace</p>
+  </li>
+  <li>
+    <p>II: Attack of the Clones</p>
+  </li>
+  <li>
+    <p>III: Revenge of the Sith</p>
+  </li>
+  <li>
+    <p>IV: A New Hope</p>
+  </li>
+  <li>
+    <p>V: The Empire Strikes Back</p>
+  </li>
 </ol>
 
 <p>So here are some images I think are great:</p>
 
-<p><img src="/static/assets/cat.jpg" alt="cat"></p>
+<p><img src="/static/assets/cat.jpg" alt="cat" /></p>
 
-<p><img src="/static/assets/mountains.jpg" alt="mountains"></p>
+<p><img src="/static/assets/mountains.jpg" alt="mountains" /></p>
 
 <p>Because of Jekyll’s flexibility, there are many solutions to how to do this.
 One common solution is to create a folder in the root of the project directory
@@ -113,13 +122,13 @@ some examples (in Markdown) of how you could do this using the <code>site.url</c
 variable in a post.</p>
 
 <blockquote>
-<p>The technological singularity, or simply the singularity, is a hypothetical
+  <p>The technological singularity, or simply the singularity, is a hypothetical
 moment in time when artificial intelligence will have progressed to the point
 of a greater-than-human intelligence, radically changing civilization, and
 perhaps human nature.</p>
 </blockquote>
 
-<h2>Second-level Heading</h2>
+<h2 id="second-level-heading">Second-level Heading</h2>
 
 <p>One of Jekyll’s best aspects is that it is “blog aware”. What does this mean,
 exactly? Well, simply put, it means that blogging is baked into Jekyll’s
@@ -127,20 +136,20 @@ functionality. If you write articles and publish them online, this means that
 you can publish and maintain a blog simply by managing a folder of text-files
 on your computer.</p>
 
-<h3>Third-level Heading</h3>
+<h3 id="third-level-heading">Third-level Heading</h3>
 
 <p>Chances are, at some point, you’ll want to include images, downloads, or other
 digital assets along with your text content. While the syntax for linking to
 these resources differs between Markdown and Textile, the problem of working
 out where to store these files in your site is something everyone will face.</p>
 
-<hr>
+<hr />
 
 <p>Lets take a break and return to <strong><em>the basics</em></strong>. Simple <em>italic</em> and <strong>bold</strong>.</p>
 
-<p>Here&#39;s a dog.</p>
+<p>Here’s a dog.</p>
 
-<p><img src="/static/assets/dog.jpg" alt="dog"></p>
+<p><img src="/static/assets/dog.jpg" alt="dog" /></p>
 
 
         </section>
