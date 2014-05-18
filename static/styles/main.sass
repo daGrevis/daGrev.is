@@ -6,6 +6,10 @@ $page-width: 640px
 $header-width: 9.5em
 $header-height: 5em
 
+$porcelain: #ECF0F1
+$madison: #2C3E50
+$ebony-clay: #22313F
+
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
 
 @import url(http://fonts.googleapis.com/css?family=Inconsolata)
@@ -27,7 +31,7 @@ html
 
 body
     font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif
-    color: #22313F
+    color: $ebony-clay
     margin-bottom: 16em
 
 ::selection
@@ -149,7 +153,7 @@ article + article
         font-size: 2em
 
         a
-            color: #22313F
+            color: $ebony-clay
             text-decoration: none
 
     section
@@ -164,27 +168,30 @@ article + article
             padding-left: 2em
 
         blockquote
-            color: #95A5A6
+            color: $madison
 
         code
             font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace
-            margin: 0 .25em
-            font-size: .8em
+            padding: 4px
+            font-size: 14px
+            color: $madison
+            background: $porcelain
+            letter-spacing: 1px
 
         pre
             padding: 2em
 
             code
-                line-height: 1.4em
-                margin: 0
-                font-size: .8em
+                // Resets.
+                background: transparent
+                padding: 0
 
         hr
             &:before
                 content: "* * *"
-                font-size: 1.4em
-                letter-spacing: .5em
-                color: #BDC3C7
+                font-size: 24px
+                letter-spacing: 12px
+                color: $madison
 
             border: 0
             margin: 4em 0

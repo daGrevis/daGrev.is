@@ -125,25 +125,27 @@ article + article {
   #body section ol {
     padding-left: 2em; }
   #body section blockquote {
-    color: #95a5a6; }
+    color: #2c3e50; }
   #body section code {
     font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace;
-    margin: 0 0.25em;
-    font-size: 0.8em; }
+    padding: 4px;
+    font-size: 14px;
+    color: #2c3e50;
+    background: #ecf0f1;
+    letter-spacing: 1px; }
   #body section pre {
     padding: 2em; }
     #body section pre code {
-      line-height: 1.4em;
-      margin: 0;
-      font-size: 0.8em; }
+      background: transparent;
+      padding: 0; }
   #body section hr {
     border: 0;
     margin: 4em 0; }
     #body section hr:before {
       content: "* * *";
-      font-size: 1.4em;
-      letter-spacing: 0.5em;
-      color: #bdc3c7; }
+      font-size: 24px;
+      letter-spacing: 12px;
+      color: #2c3e50; }
 
 @media (max-width: 1536px) {
   #header {
