@@ -125,7 +125,10 @@ article + article {
   #body section ol {
     padding-left: 2em; }
   #body section blockquote {
-    color: #2c3e50; }
+    color: #2c3e50;
+    border-left: 10px solid #ecf0f1;
+    padding-left: 10px;
+    margin-left: 20px; }
   #body section code {
     font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace;
     padding: 4px;
