@@ -6,9 +6,15 @@ $page-width: 640px
 $header-width: 9.5em
 $header-height: 5em
 
+// http://flatuicolorpicker.com/
+$saffron1: #F4D03F
+$cararra: #F2F1EF
+$silver-sand: #BDC3C7
 $porcelain: #ECF0F1
 $madison: #2C3E50
 $ebony-clay: #22313F
+$curious-blue: #1E8BC3
+$jelly-bean: #2574A9
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
 
@@ -35,9 +41,9 @@ body
     margin-bottom: 16em
 
 ::selection
-    background: #F4D03F
+    background: $saffron1
 ::-moz-selection
-    background: #F4D03F
+    background: $saffron1
 
 #header h1
     text-indent: -9999px
@@ -56,7 +62,7 @@ article
             display: inline
 
         time
-            color: #BDC3C7
+            color: $silver-sand
             font-size: 1.2em
             padding-left: .5em
 
@@ -74,7 +80,7 @@ article
                 a
                     text-decoration: none
                     font-size: 1.2em
-                    color: #F2F1EF
+                    color: $cararra
                     padding: .5em 1em
 
                 .twitter
@@ -94,21 +100,21 @@ article
             max-width: $page-width
 
         a
-            color: #1E8BC3
+            color: $curious-blue
             font-weight: bold
         a:visited
-            color: #2574A9
+            color: $jelly-bean
 
 #disqus_thread
     a
-        color: #1E8BC3
+        color: $curious-blue
 
 article + article
     margin-top: 4em
 
 #footer
-    background: #1E8BC3
-    color: #F2F1EF
+    background: $curious-blue
+    color: $cararra
     width: 100%
     margin-top: 6em
     font-size: 1.2em
@@ -119,7 +125,7 @@ article + article
     bottom: 0
 
     a
-        color: #F2F1EF
+        color: $cararra
         text-decoration: none
 
     strong
