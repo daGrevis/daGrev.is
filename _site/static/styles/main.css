@@ -142,7 +142,7 @@ article + article {
       padding: 0; }
   #body section hr {
     border: 0;
-    margin: 4em 0; }
+    margin: 24px 0 48px; }
     #body section hr:before {
       content: "* * *";
       font-size: 24px;
