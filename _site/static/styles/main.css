@@ -16,7 +16,8 @@ html {
 body {
   font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif;
   color: #22313f;
-  margin-bottom: 16em; }
+  margin-bottom: 16em;
+  text-rendering: optimizeLegibility; }
 
 ::selection {
   background: #f4d03f; }
@@ -31,9 +32,9 @@ body {
   right: 1em;
   content: " ";
   background: url("/static/vector/logo.svg");
-  width: 9.5em;
-  height: 5em;
-  background-size: 9.5em 5em; }
+  width: 270px;
+  height: 150px;
+  background-size: 270px 150px; }
 
 article header h1, article header time {
   display: inline; }

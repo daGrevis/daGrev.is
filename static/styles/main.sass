@@ -3,8 +3,9 @@
 
 $page-width: 640px
 
-$header-width: 9.5em
-$header-height: 5em
+$header-scale: 1.5
+$header-width: 180px * $header-scale
+$header-height: 100px * $header-scale
 
 // http://flatuicolorpicker.com/
 $saffron1: #F4D03F
@@ -39,6 +40,7 @@ body
     font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif
     color: $ebony-clay
     margin-bottom: 16em
+    text-rendering: optimizeLegibility
 
 ::selection
     background: $saffron1
