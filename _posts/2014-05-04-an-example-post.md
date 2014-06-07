@@ -2,7 +2,6 @@
 layout: post
 title: "An Example Post"
 date: 2014-05-04 16:45:00
-categories: jekyll update
 ---
 
 Hello and welcome to my blog! It's based on [Jekyll](http://jekyllrb.com) and

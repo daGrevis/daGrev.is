@@ -16,7 +16,7 @@ html {
 body {
   font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif;
   color: #22313f;
-  margin-bottom: 16em;
+  margin-bottom: 250px;
   text-rendering: optimizeLegibility; }
 
 ::selection {
@@ -28,8 +28,8 @@ body {
 #header h1 {
   text-indent: -9999px;
   position: fixed;
-  top: 0.5em;
-  right: 1em;
+  top: 0;
+  right: 25px;
   content: " ";
   background: url("/static/vector/logo.svg");
   width: 270px;
@@ -40,21 +40,21 @@ article header h1, article header time {
   display: inline; }
 article header time {
   color: #bdc3c7;
-  font-size: 1.2em;
-  padding-left: 0.5em; }
+  font-size: 18px;
+  padding-left: 10px; }
 article footer {
-  margin-top: 4em; }
+  margin-top: 50px; }
   article footer ul {
-    margin-bottom: 6em;
+    margin-bottom: 100px;
     list-style: none;
     padding-left: 0; }
     article footer ul li {
       display: inline; }
       article footer ul li a {
         text-decoration: none;
-        font-size: 1.2em;
+        font-size: 20px;
         color: #f2f1ef;
-        padding: 0.5em 1em; }
+        padding: 10px 20px; }
       article footer ul li .twitter {
         background: #55acee; }
       article footer ul li .google-plus {
@@ -75,16 +75,15 @@ article section a:visited {
   color: #1e8bc3; }
 
 article + article {
-  margin-top: 4em; }
+  margin-top: 75px; }
 
 #footer {
   background: #1e8bc3;
   color: #f2f1ef;
   width: 100%;
-  margin-top: 6em;
-  font-size: 1.2em;
-  padding-top: 2em;
-  padding-bottom: 1em;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
   position: absolute;
   left: 0;
   bottom: 0; }
@@ -92,16 +91,16 @@ article + article {
     color: #f2f1ef;
     text-decoration: none; }
   #footer strong {
-    padding-right: 1em;
-    letter-spacing: 0.05em; }
+    padding-right: 20px;
+    letter-spacing: 0.5px; }
   #footer ul {
     list-style: none;
     padding-left: 0;
-    font-size: 0.9em; }
+    font-size: 18px; }
     #footer ul li {
       display: inline; }
     #footer ul li + li {
-      padding-left: 1em; }
+      padding-left: 20px; }
 
 #footer > div {
   width: 640px;
@@ -110,21 +109,19 @@ article + article {
 #body {
   width: 640px;
   margin-left: 20%;
-  margin-top: 4em; }
+  margin-top: 50px; }
   #body h1, #body h2, #body h3, #body h4, #body h5, #body h6 {
     font-family: "Montserrat", Verdana, Geneva, sans-serif; }
-  #body h1 {
-    font-size: 2em; }
-    #body h1 a {
+    #body h1 a, #body h2 a, #body h3 a, #body h4 a, #body h5 a, #body h6 a {
       color: #22313f;
       text-decoration: none; }
   #body section > p, #body section li, #body section blockquote {
-    font-size: 1.4em;
-    line-height: 1.4em; }
+    font-size: 22px;
+    line-height: 36px; }
   #body section ul {
-    padding-left: 1.5em; }
+    padding-left: 25px; }
   #body section ol {
-    padding-left: 2em; }
+    padding-left: 30px; }
   #body section blockquote {
     color: #2c3e50;
     border-left: 10px solid #ecf0f1;
@@ -137,7 +134,7 @@ article + article {
     color: #2c3e50;
     background: #ecf0f1; }
   #body section pre {
-    padding: 2em; }
+    padding: 25px; }
     #body section pre code {
       background: transparent;
       padding: 0; }
@@ -153,7 +150,7 @@ article + article {
 @media (max-width: 1536px) {
   #header {
     width: 640px;
-    margin-top: 2em;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto; }
     #header h1 {
@@ -170,7 +167,8 @@ article + article {
     width: auto; }
     #header h1 {
       width: auto;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      margin-left: 10px; }
 
   article section img {
     max-width: 100%;
@@ -178,10 +176,11 @@ article + article {
   article footer ul li {
     display: block; }
   article footer ul li + li {
-    margin-top: 2em; }
+    margin-top: 25px; }
 
   #footer > div {
     width: auto; }
 
   #footer em {
+    margin-top: 10px;
     display: block; } }
