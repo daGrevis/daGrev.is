@@ -5,3 +5,5 @@ highlighter: "rouge"
 url: "http://dagrev.is/"
 author: "Raitis (daGrevis) Stengrevics"
 author_bio: "Hacker, engineer and blogger"
+paginate: 5
+paginate_path: "page/:num"

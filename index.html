@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 
     <article>
 
@@ -23,3 +23,17 @@ title: Home
     </article>
 
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+
+    <div class="pagination">
+        {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;</a>
+        {% endif %}
+
+        {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&rarr;</a>
+        {% endif %}
+    </div>
+
+{% endif %}

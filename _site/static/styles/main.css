@@ -147,6 +147,14 @@ article + article {
       letter-spacing: 12px;
       color: #2c3e50; }
 
+.pagination {
+  margin-top: 50px; }
+  .pagination a {
+    font-size: 24px;
+    letter-spacing: 12px;
+    color: #2c3e50;
+    text-decoration: none; }
+
 @media (max-width: 1536px) {
   #header {
     width: 640px;
