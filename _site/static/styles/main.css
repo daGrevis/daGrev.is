@@ -95,7 +95,17 @@ article + article {
   bottom: 0; }
   #footer a {
     color: #F2F1EF;
-    text-decoration: none; }
+    text-decoration: none;
+    position: relative; }
+    #footer a:after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-width: 0 0 1px;
+      border-style: dotted;
+      border-color: #BDC3C7; }
   #footer strong {
     padding-right: 20px;
     letter-spacing: 0.5px; }
@@ -107,6 +117,9 @@ article + article {
       display: inline; }
     #footer ul li + li {
       padding-left: 20px; }
+  #footer em {
+    display: block;
+    padding-top: 5px; }
 
 #footer > div {
   width: 640px;

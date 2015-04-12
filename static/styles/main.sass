@@ -133,6 +133,18 @@ article + article
     a
         color: $cararra
         text-decoration: none
+        position: relative
+
+        &:after
+            content: ''
+            width: 100%
+            position: absolute
+            left: 0
+            bottom: -1px
+            border:
+                width: 0 0 1px
+                style: dotted
+                color: $silver-sand
 
     strong
         padding-right: 20px
@@ -148,6 +160,10 @@ article + article
 
         li + li
             padding-left: 20px
+
+    em
+        display: block
+        padding-top: 5px
 
 #footer > div
     width: $page-width
