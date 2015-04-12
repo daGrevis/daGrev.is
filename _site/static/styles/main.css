@@ -192,25 +192,27 @@ article + article {
     margin: 0 10px; }
 
   #header {
-    width: auto; }
+    width: auto;
+    padding-bottom: 20px; }
     #header h1 {
       width: auto;
       background-repeat: no-repeat;
       margin-left: 10px;
       margin-top: -20px; }
 
-  article section img {
-    max-width: 100%;
-    max-height: auto; }
-  article footer ul li {
-    display: block; }
-  article footer ul li + li {
-    margin-top: 25px; }
+  article {
+    padding-bottom: 10px; }
+    article section img {
+      max-width: 100%;
+      max-height: auto; }
+    article footer ul li {
+      display: block; }
+    article footer ul li + li {
+      margin-top: 25px; }
 
   #footer > div {
     width: auto;
     margin: 0 10px; }
-
   #footer em {
     margin-top: 10px;
     display: block; }
