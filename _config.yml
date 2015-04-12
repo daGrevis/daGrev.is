@@ -2,7 +2,7 @@ title: "daGrev.is"
 permalink: "/:year/:month/:title"
 markdown: "kramdown"
 highlighter: "pygments"
-url: "http://127.0.0.1:4000"
+url: "http://dagrev.is"
 author: "Raitis (daGrevis) Stengrevics"
 author_bio: "Hacker, engineer and blogger"
 paginate: 5
