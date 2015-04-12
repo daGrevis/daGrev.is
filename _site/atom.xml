@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>daGrev.is</title>
+    <link href="http://127.0.0.1:4000/atom.xml" rel="self"/>
+    <link href="http://127.0.0.1:4000/"/>
+    <updated>2015-04-12T15:41:06+03:00</updated>
+    <id>http://127.0.0.1:4000</id>
+    <author>
+        <name></name>
+        <email></email>
+    </author>
+    
+        <entry>
+            <title>An Example Post</title>
+            <link href="http://127.0.0.1:4000/2015/04/an-example-post"/>
+            <updated>2015-04-12T18:40:00+03:00</updated>
+            <id>http://127.0.0.1:4000/2015/04/an-example-post</id>
+            <content type="html">&lt;p&gt;Hello and welcome to my blog! It’s based on &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; and
+seems to be working fine.&lt;/p&gt;
+</content>
+        </entry>
+    
+</feed>

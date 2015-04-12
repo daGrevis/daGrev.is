@@ -1,0 +1,208 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@font-face {
+  font-family: "Franklin Gothic FS Book";
+  src: url("/static/fonts/FranklinGothic-Book.eot");
+  src: url("/static/fonts/FranklinGothic-Book.eot?#iefix") format("embedded-opentype"), url("/static/fonts/FranklinGothic-Book.woff") format("woff"), url("/static/fonts/FranklinGothic-Book.ttf") format("truetype"), url("/static/fonts/FranklinGothic-Book.svg#webfont") format("svg"); }
+@font-face {
+  font-family: "Franklin Gothic FS Book";
+  src: url("/static/fonts/FranklinGothic-BookIt.eot");
+  src: url("/static/fonts/FranklinGothic-BookIt.eot?#iefix") format("embedded-opentype"), url("/static/fonts/FranklinGothic-BookIt.woff") format("woff"), url("/static/fonts/FranklinGothic-BookIt.ttf") format("truetype"), url("/static/fonts/FranklinGothic-BookIt.svg#webfont") format("svg");
+  font-style: italic; }
+html {
+  position: relative;
+  min-height: 100%; }
+
+body {
+  font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif;
+  color: #22313F;
+  margin-bottom: 250px;
+  text-rendering: optimizeLegibility; }
+
+::selection {
+  background: #F4D03F; }
+
+::-moz-selection {
+  background: #F4D03F; }
+
+pre ::selection {
+  background: #515151; }
+
+pre ::-moz-selection {
+  background: #515151; }
+
+#header h1 {
+  text-indent: -9999px;
+  position: fixed;
+  top: 0;
+  right: 25px;
+  content: " ";
+  background: url("/static/vector/logo.svg");
+  width: 270px;
+  height: 150px;
+  background-size: 270px 150px; }
+
+article header h1, article header time {
+  display: inline; }
+article header time {
+  color: #BDC3C7;
+  font-size: 18px;
+  padding-left: 10px; }
+article footer {
+  margin-top: 50px; }
+  article footer ul {
+    margin-bottom: 100px;
+    list-style: none;
+    padding-left: 0; }
+    article footer ul li {
+      display: inline; }
+      article footer ul li a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #F2F1EF;
+        padding: 10px 20px; }
+      article footer ul li .twitter {
+        background: #55ACEE; }
+      article footer ul li .google-plus {
+        background: #DD4B39; }
+      article footer ul li .hacker-news {
+        background: #FF8937; }
+      article footer ul li .lobsters {
+        background: #ac120d; }
+article section img {
+  max-width: 640px; }
+article section a {
+  color: #1E8BC3;
+  font-weight: bold; }
+article section a:visited {
+  color: #2574A9; }
+
+#disqus_thread a {
+  color: #1E8BC3; }
+
+article + article {
+  margin-top: 75px; }
+
+#footer {
+  background: #1E8BC3;
+  color: #F2F1EF;
+  width: 100%;
+  font-size: 20px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  position: absolute;
+  left: 0;
+  bottom: 0; }
+  #footer a {
+    color: #F2F1EF;
+    text-decoration: none; }
+  #footer strong {
+    padding-right: 20px;
+    letter-spacing: 0.5px; }
+  #footer ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px; }
+    #footer ul li {
+      display: inline; }
+    #footer ul li + li {
+      padding-left: 20px; }
+
+#footer > div {
+  width: 640px;
+  margin-left: 20%; }
+
+#body {
+  width: 640px;
+  margin-left: 20%;
+  margin-top: 50px; }
+  #body h1, #body h2, #body h3, #body h4, #body h5, #body h6 {
+    font-family: "Montserrat", Verdana, Geneva, sans-serif; }
+    #body h1 a, #body h2 a, #body h3 a, #body h4 a, #body h5 a, #body h6 a {
+      color: #22313F;
+      text-decoration: none; }
+  #body section > p, #body section li, #body section blockquote {
+    font-size: 22px;
+    line-height: 36px; }
+  #body section ul {
+    padding-left: 25px; }
+  #body section ol {
+    padding-left: 30px; }
+  #body section blockquote {
+    color: #2C3E50;
+    border-left: 10px solid #ECF0F1;
+    padding-left: 10px;
+    margin-left: 20px; }
+  #body section code {
+    font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace;
+    padding: 6px;
+    font-size: 12px;
+    color: #2C3E50;
+    background: #ECF0F1; }
+  #body section pre {
+    padding: 25px; }
+    #body section pre code {
+      background: transparent;
+      padding: 0; }
+  #body section hr {
+    border: 0;
+    margin: 24px 0 48px; }
+    #body section hr:before {
+      content: "* * *";
+      font-size: 24px;
+      letter-spacing: 12px;
+      color: #2C3E50; }
+
+.pagination {
+  margin-top: 50px; }
+  .pagination a {
+    font-size: 24px;
+    letter-spacing: 12px;
+    color: #2C3E50;
+    text-decoration: none; }
+
+@media (max-width: 1536px) {
+  #header {
+    width: 640px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto; }
+    #header h1 {
+      position: static; }
+
+  #footer > div, #body {
+    margin-left: auto;
+    margin-right: auto; } }
+@media (max-width: 640px) {
+  #body {
+    width: auto;
+    margin: 0 10px; }
+
+  #header {
+    width: auto; }
+    #header h1 {
+      width: auto;
+      background-repeat: no-repeat;
+      margin-left: 10px;
+      margin-top: -20px; }
+
+  article section img {
+    max-width: 100%;
+    max-height: auto; }
+  article footer ul li {
+    display: block; }
+  article footer ul li + li {
+    margin-top: 25px; }
+
+  #footer > div {
+    width: auto;
+    margin: 0 10px; }
+
+  #footer em {
+    margin-top: 10px;
+    display: block; }
+
+  #body section code {
+    font-size: 14px; }
+  #body section pre {
+    padding: 15px; } }
