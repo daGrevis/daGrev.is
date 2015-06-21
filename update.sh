@@ -2,4 +2,5 @@
 
 rm -rf _site/
 git pull -q
-bundle update
+bundle install
+git checkout Gemfile.lock
