@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OLD_HASH=$(git rev-parse --short HEAD)
+OLD_HASH=$(git rev-parse HEAD)
 git pull
 if [[ "${OLD_HASH}" != $(git rev-parse HEAD) ]]; then
     rm -rf _site/
