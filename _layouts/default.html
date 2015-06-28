@@ -14,7 +14,7 @@
 
         <link rel="stylesheet" href="/static/styles/normalize-3.0.1.css">
         <link rel="stylesheet" href="/static/styles/main.css">
-        <link rel="stylesheet" href="/static/styles/base16-default.css">
+        <link rel="stylesheet" href="/static/styles/base16-eighties.css">
 
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
@@ -49,20 +49,23 @@
     </head>
     <body>
         <header id="header">
-            <a href="/">
+            <a href="/" title="Go to {{ site.title }}">
                 <h1>{{ site.title }}</h1>
             </a>
         </header>
 
         <div id="body">
-
-            {{ content }}
-
+            <section>
+                {{ content }}
+            </section>
         </div>
 
         <footer id="footer">
             <div>
-                <p><strong>&copy;&nbsp;{{ site.author }}</strong> <em><a href="https://stallman.org/articles/on-hacking.html" title="On Hacking">Hacker</a>, software engineer and wannabe blogger</em></p>
+                <p>
+                    <strong id="footer-author">&copy;&nbsp;{{ site.author }}</strong>
+                    <em id="footer-quote"><a href="https://stallman.org/articles/on-hacking.html" title="On Hacking">Hacker</a>, software engineer and wannabe blogger</em>
+                </p>
 
                 <nav>
                     <ul>

@@ -3,28 +3,30 @@ layout: default
 ---
 
 <article>
-
     <header>
-
-        <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m" }}</time>
-
     </header>
 
     <section>
-
         {{ content }}
-
     </section>
 
     <footer>
-
         <nav>
             <ul>
-                <li><a href="//twitter.com/home?status={{ page.title | uri_escape }}%20by%20@daGrevis%20{{ site.url }}{{ page.url }}" target="_blank" class="twitter">Twitter</a></li>
-                <li><a href="//plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank" class="google-plus">Google+</a></li>
-                <li><a href="//news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&amp;t={{ page.title | uri_escape }}" target="_blank" class="hacker-news">Hacker News</a></li>
-                <li><a href="//lobste.rs/stories/new?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}" target="_blank" class="lobsters">Lobsters</a></li>
+                <li class="twitter">
+                    <a href="//twitter.com/home?status={{ page.title | uri_escape }}%20by%20@daGrevis%20{{ site.url }}{{ page.url }}" target="_blank">Twitter</a>
+                </li>
+                <li class="google-plus">
+                    <a href="//plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">Google+</a>
+                </li>
+                <li class="hacker-news">
+                    <a href="//news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&amp;t={{ page.title | uri_escape }}" target="_blank">Hacker News</a>
+                </li>
+                <li class="lobsters">
+                    <a href="//lobste.rs/stories/new?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}" target="_blank">Lobsters</a>
+                </li>
             </ul>
         </nav>
 
@@ -38,7 +40,5 @@ layout: default
              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
              })();
         </script>
-
     </footer>
-
 </article>

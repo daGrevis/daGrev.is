@@ -1,12 +1,6 @@
 ---
 ---
 
-$page-width: 640px
-
-$header-scale: 1.5
-$header-width: 180px * $header-scale
-$header-height: 100px * $header-scale
-
 // http://flatuicolorpicker.com/
 $saffron1: #F4D03F
 $cararra: #F2F1EF
@@ -16,6 +10,16 @@ $madison: #2C3E50
 $ebony-clay: #22313F
 $curious-blue: #1E8BC3
 $jelly-bean: #2574A9
+
+$golden-ratio: 1.61803398875
+
+$body-width: 560px
+$x-width: 40px
+$y-height: 80px
+
+$header-scale: 1.5
+$header-width: 180px * $header-scale
+$header-height: 100px * $header-scale
 
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700)
 
@@ -32,267 +36,273 @@ $jelly-bean: #2574A9
     src: url("/static/fonts/FranklinGothic-BookIt.eot?#iefix") format("embedded-opentype"), url("/static/fonts/FranklinGothic-BookIt.woff") format("woff"), url("/static/fonts/FranklinGothic-BookIt.ttf") format("truetype"), url("/static/fonts/FranklinGothic-BookIt.svg#webfont") format("svg")
     font-style: italic
 
-html
-    position: relative
-    min-height: 100%
-
-body
-    font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif
-    color: $ebony-clay
-    margin-bottom: 250px
-    text-rendering: optimizeLegibility
-    background: white
-
-::selection
-    background: $saffron1
-::-moz-selection
-    background: $saffron1
-
-pre ::selection
-    background: #515151
-pre ::-moz-selection
-    background: #515151
-
-#header h1
-    text-indent: -9999px
-    position: fixed
-    top: 0
-    right: 25px
-    content: " "
-    background: url("/static/vector/logo.svg")
-    width: $header-width
-    height: $header-height
-    background-size: $header-width $header-height
-
-article
-    header
-        h1, time
-            display: inline
-
-        time
-            color: $silver-sand
-            font-size: 18px
-            padding-left: 10px
-
-    footer
-        margin-top: 50px
-
-        ul
-            margin-bottom: 100px
-            list-style: none
-            padding-left: 0
-
-            li
-                display: inline
-
-                a
-                    text-decoration: none
-                    font-size: 20px
-                    color: $cararra
-                    padding: 10px 20px
-
-                .twitter
-                    background: #55ACEE
-
-                .google-plus
-                    background: #DD4B39
-
-                .hacker-news
-                    background: #FF8937
-
-                .lobsters
-                    background: #ac120d
-
-    section
-        img
-            max-width: $page-width
-
-        a
-            color: $curious-blue
-            font-weight: bold
-        a:visited
-            color: $jelly-bean
-
-#disqus_thread
-    a
-        color: $curious-blue
-
-article + article
-    margin-top: 75px
-
-#footer
-    background: $curious-blue
-    color: $cararra
-    width: 100%
-    font-size: 20px
-    padding-top: 40px
-    padding-bottom: 30px
-    position: absolute
-    left: 0
-    bottom: 0
+@mixin improved-underline
+    // http://stackoverflow.com/a/12282093/458610
 
     a
-        color: $cararra
         text-decoration: none
         position: relative
 
-        &:after
-            content: ''
-            width: 100%
-            position: absolute
-            left: 0
-            bottom: -1px
-            border:
-                width: 0 0 1px
-                style: dotted
-                color: $silver-sand
+    a:after
+        content: ''
+        width: 100%
+        position: absolute
+        left: 0
+        bottom: -1px
+        border-width: 0 0 1px
+        border-style: dotted
+        color: $silver-sand
 
-    strong
-        padding-right: 20px
+@mixin hide-text
+    // http://stackoverflow.com/a/471538/458610
+
+    text-indent: 100%
+    white-space: nowrap
+    overflow: hidden
+
+// https://github.com/mrmrs/fluidity
+img, canvas, iframe, video, svg, select, textarea
+    max-width: 100%
+
+// https://css-tricks.com/box-sizing/
+html
+    box-sizing: border-box
+*, *:before, *:after
+    box-sizing: inherit
+
+body
+    // https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+    background: white
+    text-rendering: optimizelegibility
+    font-family: "Franklin Gothic FS Book", Helvetica, Arial, sans-serif
+
+#header
+    h1
+        @include hide-text
+
+        position: fixed
+        top: $y-height / 2
+        right: $x-width
+        margin: 0
+        background: url("/static/vector/logo.svg")
+        width: $header-width
+        height: $header-height
+        background-size: $header-width $header-height
+
+#body
+    flex: 1
+    max-width: $body-width
+    margin:
+        left: 20%
+        top: $y-height
+        bottom: $y-height
+
+    article
+        color: $ebony-clay
+
+        h1, h2, h3, h4, h5, h6
+            font-family: "Montserrat", Verdana, Geneva, sans-serif
+
+        a
+            text-decoration: none
+            color: $curious-blue
+
+        header
+            h1, time
+                display: inline
+
+            a
+                color: $ebony-clay
+
+            h1
+                margin-right: 10px
+
+            time
+                color: $silver-sand
+                font-size: 18px
+
+        section
+            @include improved-underline
+
+            // http://www.pearsonified.com/2011/12/golden-ratio-typography.php
+            font-size: 22px
+            line-height: 22px * $golden-ratio
+
+            h2, h3, h4
+                display: block
+
+            // Should not be used in article content.
+            h1, h5, h6
+                color: red !important
+
+            h2
+                font-size: 26px
+
+            h3
+                font-size: 22px
+
+            h4
+                font-size: 18px
+
+            ul
+                list-style: circle
+
+            blockquote
+                color: lighten($madison, 15%)
+                border-left: 10px solid $porcelain
+                padding-left: $x-width / 2
+                margin-left: $x-width / 4
+
+            code
+                font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace
+                font-size: 9pt
+                color: $madison
+
+            pre
+                background: white
+                line-height: .8
+                margin:
+                    top: $y-height / 2
+                    bottom: $y-height / 2
+                overflow-y: hidden
+
+        footer
+            #disqus_thread
+                margin-top: $y-height
+
+            nav
+                margin-top: $y-height / 2
+
+                ul
+                    list-style: none
+                    padding-left: 0
+
+                li
+                    display: inline-block
+                    padding: 10px ($x-width / 2)
+                    margin-right: 5px
+
+                    a
+                        text-decoration: none
+                        font-size: 20px
+                        color: $cararra
+
+                li.twitter
+                    background: #55ACEE
+
+                li.google-plus
+                    background: #DD4B39
+
+                li.hacker-news
+                    background: #FF8937
+
+                li.lobsters
+                    background: #ac120d
+
+    article + article
+        margin-top: $y-height
+
+#footer
+    color: $cararra
+    font-size: 20px
+
+    & > div
+        background: $curious-blue
+        padding-left: 20%
+        padding:
+            top: $y-height / 2
+            bottom: $y-height / 2
+
+    @include improved-underline
+
+    a
+        color: $cararra
+
+    #footer-author
         letter-spacing: .5px
 
-    ul
-        list-style: none
-        padding-left: 0
+    #footer-quote
+        margin-top: 5px
+        display: block
+
+    nav
         font-size: 18px
+
+        ul
+            list-style: none
+            padding-left: 0
 
         li
             display: inline
+            padding-right: $x-width / 2
 
-        li + li
-            padding-left: 20px
-
-    em
-        display: block
-        padding-top: 5px
-
-#footer > div
-    width: $page-width
-    margin-left: 20%
-
-#body
-    width: $page-width
-    margin-left: 20%
-    margin-top: 50px
-
-    h1, h2, h3, h4, h5, h6
-        font-family: "Montserrat", Verdana, Geneva, sans-serif
-
-
-        a
-            color: $ebony-clay
-            text-decoration: none
-
-    section
-        & > p, li, blockquote
-            font-size: 22px
-            line-height: 36px
-
-        ul
-            padding-left: 25px
-
-        ol
-            padding-left: 30px
-
-        blockquote
-            color: $madison
-            border-left: 10px solid $porcelain
-            padding-left: 10px
-            margin-left: 20px
-
-        code
-            font-family: Inconsolata-g, Inconsolata, "Courier New", Courier, monospace
-            padding: 6px
-            font-size: 12px
-            color: $madison
-            background: $porcelain
-
-        pre
-            padding: 25px
-
-            code
-                // Resets.
-                background: transparent
-                padding: 0
-
-        hr
-            &:before
-                content: "* * *"
-                font-size: 24px
-                letter-spacing: 12px
-                color: $madison
-
-            border: 0
-            margin: 24px 0 48px
-
-.pagination
-    margin-top: 50px
-
-    a
-        font-size: 24px
-        letter-spacing: 12px
-        color: $madison
-        text-decoration: none
-
-@media (max-width: $page-width * 2 + 128px * 2) // 128px == 20% of $page-width
-    #header
-        width: $page-width
-        margin:
-            top: 50px
-            left: auto
-            right: auto
-
-        h1
-            position: static
-
-    #footer > div, #body
-        margin:
-            left: auto
-            right: auto
-
-@media (max-width: $page-width)
+@media (max-width: $body-width + $header-width * 2 + $x-width * 2)
     #body
-        width: auto
-        margin: 0 10px
-
-    #header
-        width: auto
-        padding-bottom: 20px
-
-        h1
-            width: auto
-            background-repeat: no-repeat
-            margin-left: 10px
-            margin-top: -20px
-
-    article
-        padding-bottom: 10px
-
-        section
-            img
-                max-width: 100%
-                max-height: auto
-
-        footer
-            ul
-                li
-                    display: block
-                li + li
-                    margin-top: 25px
+        margin-left: $x-width
+        margin-right: $x-width
 
     #footer
         & > div
-            width: auto
-            margin: 0 10px
+            padding-left: $x-width
 
-        em
-            margin-top: 10px
-            display: block
+@media (max-width: $body-width + $header-width + $x-width * 3)
+    #header
+        h1
+            position: static
+            margin:
+                top: $y-height / 2
+                left: $x-width
+
+@media (max-width: $body-width)
+    #header
+        h1
+            margin:
+                left: $x-width / 2
 
     #body
-        section
-            code
-                font-size: 14px
+        margin:
+            top: $y-height / 2
+            bottom: $y-height / 2
+            left: $x-width / 2
+            right: $x-width / 2
 
-            pre
-                padding: 15px
+        article
+            section
+                ul, ol
+                    padding-left: $x-width / 2
+
+                blockquote
+                    padding-left: $x-width / 4
+                    margin-right: $x-width / 4
+
+                pre
+                    margin:
+                        top: 20px
+                        bottom: 20px
+
+            footer
+                #disqus_thread
+                    margin-top: $y-height / 2
+
+                nav
+                    li
+                        margin:
+                            top: 5px
+                            right: 0
+
+        article + article
+            margin-top: $y-height / 2
+
+    #footer
+        & > div
+            padding-left: $x-width / 2
+
+        nav
+            li
+                display: block
+
+            li + li
+                padding-top: 10px

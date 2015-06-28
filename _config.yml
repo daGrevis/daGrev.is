@@ -1,4 +1,4 @@
-title: "daGrev.is"
+title: "daGrev.is Blog"
 permalink: "/:year/:month/:title"
 markdown: "kramdown"
 highlighter: "pygments"
