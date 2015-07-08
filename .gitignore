@@ -1,2 +1,8 @@
 .sass-cache/
 _site/
+
+# My test posts locally.
+_posts/2015-04-12-an-example-post.md
+_posts/2015-04-12-gump-css.md
+_posts/2015-07-26-example-content.md
+_posts/2015-07-28-clojure-the-programming-language.md
