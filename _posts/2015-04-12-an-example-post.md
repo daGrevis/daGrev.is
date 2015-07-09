@@ -9,5 +9,5 @@ Welcome to [my new blog](http://dagrev.is/)! Currently it's work in progress...
 ## Updating Site
 
 Just push an update [to the GitHub repo](https://github.com/daGrevis/daGrev.is)
-and the change will be get published in a matter of seconds. A pull request is
-fine too!
+and the change will get published in a matter of seconds. A pull request is fine
+too!
