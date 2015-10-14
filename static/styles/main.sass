@@ -272,9 +272,10 @@ body
                 top: $y-height / 2
                 left: $x-width
 
-            width: $header-width / 2
-            height: $header-height / 2
-            background-size: $header-width / 2 $header-height / 2
+            $scale: .75
+            width: $header-width * $scale
+            height: $header-height * $scale
+            background-size: $header-width * $scale $header-height * $scale
 
 @media (max-width: $body-width)
     #header
