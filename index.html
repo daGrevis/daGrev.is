@@ -11,8 +11,12 @@ title: Home
         </header>
 
         <section>
-            {{ post.content }}
+            {{ post.excerpt }}
         </section>
+
+        <footer class="is-excerpt">
+            <a href="{{ post.url }}">Continue reading &rarr;</a>
+        </footer>
     </article>
 {% endfor %}
 
