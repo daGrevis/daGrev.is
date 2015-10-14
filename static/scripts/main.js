@@ -1,4 +1,6 @@
 $(function() {
+    FastClick.attach(document.body)
+
     $("#body article section a").each(function() {
 	var $anchor = $(this)
 	var href = $anchor.attr("href")
