@@ -12,9 +12,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/static/styles/normalize-3.0.1.css">
-        <link rel="stylesheet" href="/static/styles/main.css">
         <link rel="stylesheet" href="/static/styles/base16-eighties.css">
+        <link rel="stylesheet" href="/static/styles/kudosplease.css">
+        <link rel="stylesheet" href="/static/styles/main.css">
 
         <link rel="shortcut icon" href="/favicon.ico">
         <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
@@ -64,7 +66,7 @@
             <div>
                 <p>
                     <strong id="footer-author">&copy;&nbsp;{{ site.author }}</strong>
-                    <em id="footer-quote"><a href="https://stallman.org/articles/on-hacking.html" title="On Hacking" target="_blank">Hacker</a>, software engineer and wannabe blogger</em>
+                    <em id="footer-quote"><a href="https://stallman.org/articles/on-hacking.html" title="“On Hacking” by Richard Stallman" target="_blank">Hacker<sup>[0]</sup></a>, software developer and wannabe blogger</em>
                 </p>
 
                 <nav>
@@ -79,6 +81,17 @@
         </footer>
 
         <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="/static/scripts/kudosplease.js"></script>
         <script src="/static/scripts/main.js"></script>
+
+        <script>
+            new KudosPlease({
+                persistent: true,
+                el: ".kudos",
+                status: {
+                    gamma: "fa-hand-peace-o",
+                },
+            })
+        </script>
     </body>
 </html>

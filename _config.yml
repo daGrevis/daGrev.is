@@ -4,6 +4,6 @@ markdown: "kramdown"
 highlighter: "pygments"
 url: "http://dagrev.is"
 author: "Raitis (daGrevis) Stengrevics"
-author_bio: "Hacker, engineer and blogger"
+author_bio: "Hacker, software developer and wannabe blogger"
 paginate: 5
 paginate_path: "page/:num"

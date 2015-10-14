@@ -168,11 +168,8 @@ body
                 overflow-y: hidden
 
         footer
-            #disqus_thread
-                margin-top: $y-height
-
             nav
-                margin-top: $y-height / 2
+                margin-top: $y-height
 
                 ul
                     list-style: none
@@ -201,6 +198,16 @@ body
                 li.lobsters
                     background: #ac120d
 
+            #disqus_thread
+                margin-top: $y-height
+
+            .kudos
+                position: absolute
+                margin: 0
+                margin:
+                    left: -$x-width * 3
+                    top: -$y-height
+
     article + article
         margin-top: $y-height
 
@@ -227,6 +234,9 @@ body
         margin-top: 5px
         display: block
 
+        sup
+            font-size: 12px
+
     nav
         font-size: 18px
 
@@ -237,6 +247,12 @@ body
         li
             display: inline
             padding-right: $x-width / 2
+
+@media (max-width: 1180px)
+    #body article footer .kudos
+        position: relative
+        margin: 0
+        margin-top: $y-height / 2
 
 @media (max-width: $body-width + $header-width * 2 + $x-width * 2)
     #body
