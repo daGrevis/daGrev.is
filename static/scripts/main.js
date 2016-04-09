@@ -11,8 +11,8 @@ $(function() {
     })
 
     // Written like this to avoid bots getting my... you know what.
-    var dont = "me"
-    var spam = "dagrev.is"
+    var dont = "dagrevis"
+    var spam = ["om", ".c", "ail", "gm"].reverse().join("")
     $("#do-not-spam-this").html(
         dont + String.fromCharCode(Math.pow(4, 3)) + spam
     )
