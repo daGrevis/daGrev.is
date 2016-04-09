@@ -1,6 +1,5 @@
 $(function() {
-    FastClick.attach(document.body)
-
+    // Adds target=_blank to all links that don't start with dagrev.is.
     $("#body article section a").each(function() {
         var $anchor = $(this)
         var href = $anchor.attr("href")
