@@ -16,16 +16,16 @@ layout: default
         <nav>
             <ul>
                 <li class="twitter">
-                    <a href="//twitter.com/home?status={{ page.title | uri_escape }}%20by%20@daGrevis%20{{ site.url }}{{ page.url }}" target="_blank">Twitter</a>
+                    <a href="https://twitter.com/share?text={{ page.title | uri_escape }}&amp;url={{ site.url | uri_escape }}{{ page.url | uri_escape }}" target="_blank">Twitter</a>
                 </li>
-                <li class="google-plus">
-                    <a href="//plus.google.com/share?url={{ site.url }}{{ page.url }}" target="_blank">Google+</a>
+                <li class="facebook">
+                    <a href="https://facebook.com/sharer/sharer.php?u={{ site.url | uri_escape }}{{ page.url | uri_escape }}" target="_blank">Facebook</a>
                 </li>
                 <li class="hacker-news">
-                    <a href="//news.ycombinator.com/submitlink?u={{ site.url }}{{ page.url }}&amp;t={{ page.title | uri_escape }}" target="_blank">Hacker News</a>
+                    <a href="https://news.ycombinator.com/submitlink?u={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;t={{ page.title | uri_escape }}" target="_blank">Hacker News</a>
                 </li>
                 <li class="lobsters">
-                    <a href="//lobste.rs/stories/new?url={{ site.url }}{{ page.url }}&amp;title={{ page.title | uri_escape }}" target="_blank">Lobsters</a>
+                    <a href="https://lobste.rs/stories/new?url={{ site.url | uri_escape }}{{ page.url | uri_escape }}&amp;title={{ page.title | uri_escape }}" target="_blank">Lobsters</a>
                 </li>
             </ul>
         </nav>
