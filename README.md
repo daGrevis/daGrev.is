@@ -1,26 +1,30 @@
 # daGrev.is Blog
 
-## Installing
+## Installing Environment
 
 ~~~
 gem install bundler
 bundle install
 ~~~
 
-## Updating
+## Updating Environment
 
 ~~~
 bundle update
 ~~~
 
-## Running
+## Running Blog
 
 ~~~
 bundle exec jekyll serve
+# or
+bundle exec jekyll serve --drafts
 ~~~
 
-## Building
+## Building Blog
 
 ~~~
 bundle exec jekyll build
 ~~~
+
+Everything will be built into `_site/` directory.
