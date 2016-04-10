@@ -1,0 +1,52 @@
+https://keybase.io/dagrevis
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://dagrev.is
+  * I am dagrevis (https://keybase.io/dagrevis) on keybase.
+  * I have a public key ASA3qqqDoUtkQKkikAIRIrF9-fpWDZ2eoJP3YHJUaoi8iAo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101fff9583d05a38963f5c321240362cd055ba060afa16cdfb88fb5abc9ba6e61b90a",
+            "host": "keybase.io",
+            "kid": "012037aaaa83a14b6440a92290021122b17df9fa560d9d9ea093f76072546a88bc880a",
+            "uid": "59ea6d7d650efdea01539b556761df00",
+            "username": "dagrevis"
+        },
+        "service": {
+            "hostname": "dagrev.is",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.15"
+    },
+    "ctime": 1460321900,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1460321750,
+        "hash": "30931620db6846992940937a7b6646d5d4d6686be9c9b865331703d3bd4897fc149d04aada758e8b103b668817de84ee3562425fb3224fcfebffe7f3cbae7cf4",
+        "seqno": 437617
+    },
+    "prev": "292fa42fb4843d889d807767f780d858adfc2f48f3335f768c1b9edd66cd91a7",
+    "seqno": 24,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+g6Rib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgN6qqg6FLZECpIpACESKxffn6Vg2dnqCT92ByVGqIvIgKp3BheWxvYWTFAvF7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxZmZmOTU4M2QwNWEzODk2M2Y1YzMyMTI0MDM2MmNkMDU1YmEwNjBhZmExNmNkZmI4OGZiNWFiYzliYTZlNjFiOTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMzdhYWFhODNhMTRiNjQ0MGE5MjI5MDAyMTEyMmIxN2RmOWZhNTYwZDlkOWVhMDkzZjc2MDcyNTQ2YTg4YmM4ODBhIiwidWlkIjoiNTllYTZkN2Q2NTBlZmRlYTAxNTM5YjU1Njc2MWRmMDAiLCJ1c2VybmFtZSI6ImRhZ3JldmlzIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJkYWdyZXYuaXMiLCJwcm90b2NvbCI6Imh0dHA6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE1In0sImN0aW1lIjoxNDYwMzIxOTAwLCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NjAzMjE3NTAsImhhc2giOiIzMDkzMTYyMGRiNjg0Njk5Mjk0MDkzN2E3YjY2NDZkNWQ0ZDY2ODZiZTljOWI4NjUzMzE3MDNkM2JkNDg5N2ZjMTQ5ZDA0YWFkYTc1OGU4YjEwM2I2Njg4MTdkZTg0ZWUzNTYyNDI1ZmIzMjI0ZmNmZWJmZmU3ZjNjYmFlN2NmNCIsInNlcW5vIjo0Mzc2MTd9LCJwcmV2IjoiMjkyZmE0MmZiNDg0M2Q4ODlkODA3NzY3Zjc4MGQ4NThhZGZjMmY0OGYzMzM1Zjc2OGMxYjllZGQ2NmNkOTFhNyIsInNlcW5vIjoyNCwidGFnIjoic2lnbmF0dXJlIn2jc2lnxEABtSHWp3kzkTBi06X3LGsuRkO60XTGrYdgqQh0X7BFDmrQ0H33yjpbD3EtBlBjoI2xH9mhgz5Civ1hL96k3TEMqHNpZ190eXBlIKN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/dagrevis
+
