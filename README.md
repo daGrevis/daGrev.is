@@ -1,8 +1,4 @@
-# daGrev.is Blog
-
-[To blog](http://dagrev.is/).
-
-Blog posts are written in Markdown and can be found in  `_posts/` directory.
+# [daGrev.is Blog](http://dagrev.is/)
 
 ## Installing Environment
 
@@ -39,11 +35,12 @@ Everything will be built into `_site/` directory.
 docker run -v $(pwd):/tmp/jekyll -w "/tmp/jekyll" -it --rm irakli/jekyll build
 ~~~
 
-## Serving with Nginx container
+## Run Containers on Production
 
 ~~~
 docker-compose up
 ~~~
 
-**Warning:** The command above will also run other containers besides Nginx
-(see `docker-compose.yml`).
+**Warning:** Same setup as [daGrev.is production](http://dagrev.is/) may
+include other containers besides Nginx (see `docker-compose.yml` and
+`nginx.conf`).
