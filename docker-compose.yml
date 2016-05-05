@@ -15,6 +15,10 @@ services:
     restart: always
 
   cashout:
-      container_name: cashout
-      image: cashout
-      restart: always
+    container_name: cashout
+    image: cashout
+    volumes:
+     - /var/cashout:/var/cashout
+    environment:
+      CASHOUT_DBPATH: /var/cashout/default.db
+    restart: always
