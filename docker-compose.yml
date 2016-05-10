@@ -21,4 +21,5 @@ services:
      - /var/cashout:/var/cashout
     environment:
       CASHOUT_DBPATH: /var/cashout/default.db
+      CASHOUT_APPROOT: /cashout
     restart: always
