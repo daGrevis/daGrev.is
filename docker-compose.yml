@@ -19,6 +19,7 @@ services:
     image: cashout
     volumes:
      - /var/cashout:/var/cashout
+     - /srv/cashout:/app/static
     environment:
       CASHOUT_DBPATH: /var/cashout/default.db
       CASHOUT_APPROOT: /cashout
