@@ -8,6 +8,7 @@ services:
      - /etc/daGrev.is/nginx.conf:/etc/nginx/nginx.conf:ro
      - /etc/daGrev.is/.htpasswd:/etc/nginx/.htpasswd:ro
      - /srv/daGrev.is:/srv/daGrev.is:ro
+     - /srv/svg-scene:/srv/svg-scene:ro
     ports:
      - '80:80'
     links:
