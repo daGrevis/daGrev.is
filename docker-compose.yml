@@ -25,3 +25,14 @@ services:
       CASHOUT_DBPATH: /var/cashout/default.db
       CASHOUT_APPROOT: /cashout
     restart: always
+
+  shout:
+    container_name: shout
+    image: arbourd/shout
+    volumes:
+     - ~/.shout:/shout
+    ports:
+     - '9000:9000'
+    environment:
+      PRIVATE: "true"
+    restart: always
