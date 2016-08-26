@@ -31,7 +31,7 @@ services:
     container_name: lounge
     image: mylounge # https://github.com/daGrevis/docker-thelounge
     volumes:
-     - ~/.lounge:/home/lounge/.lounge
+     - /etc/.lounge:/root/.lounge
     ports:
      - '9000:9000'
     command: lounge --private start
