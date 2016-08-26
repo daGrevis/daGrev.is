@@ -13,6 +13,7 @@ services:
      - '80:80'
     links:
      - cashout
+     - lounge
     restart: always
 
   cashout:
@@ -28,10 +29,10 @@ services:
 
   lounge:
     container_name: lounge
-    image: rgarrigue/thelounge
+    image: mylounge # https://github.com/daGrevis/docker-thelounge
     volumes:
-     - ~/.lounge:/lounge
+     - ~/.lounge:/home/lounge/.lounge
     ports:
      - '9000:9000'
-    command: lounge --home /lounge --private
+    command: lounge --private start
     restart: always
