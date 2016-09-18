@@ -32,7 +32,5 @@ services:
     image: mylounge # https://github.com/daGrevis/docker-thelounge
     volumes:
      - /etc/.lounge:/root/.lounge
-    ports:
-     - '9000:9000'
     command: lounge --private start
     restart: always
