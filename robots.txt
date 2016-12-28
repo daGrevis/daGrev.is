@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /svg-scene
+Disallow: /msks
+Disallow: /developerslv
+Disallow: /msks-server
+Disallow: /irc
+Disallow: /cashout
+Disallow: /rethink
