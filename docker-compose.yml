@@ -10,12 +10,14 @@ services:
      - /srv/daGrev.is:/srv/daGrev.is:ro
      - /srv/svg-scene:/srv/svg-scene:ro
      - ~/msks/build:/srv/msks:ro
+     - ~/developerslv/build:/srv/developerslv:ro
     ports:
      - '80:80'
     links:
      - cashout
      - lounge
      - rethink
+     - msks-server
     restart: always
 
   cashout:
