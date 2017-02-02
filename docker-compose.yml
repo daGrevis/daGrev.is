@@ -24,7 +24,6 @@ services:
     image: mylounge # https://github.com/daGrevis/docker-thelounge
     volumes:
      - /etc/.lounge:/root/.lounge
-    command: lounge --private start
     restart: always
 
   rethink:
