@@ -8,22 +8,14 @@ services:
      - /etc/daGrev.is/nginx.conf:/etc/nginx/nginx.conf:ro
      - /etc/daGrev.is/.htpasswd:/etc/nginx/.htpasswd:ro
      - /srv/daGrev.is:/srv/daGrev.is:ro
-     - /srv/svg-scene:/srv/svg-scene:ro
      - ~/msks/build:/srv/msks:ro
-     - ~/developerslv/build:/srv/developerslv:ro
+     - ~/msks/developerslv:/srv/developerslv:ro
     ports:
      - '80:80'
     links:
-     - lounge
      - rethink
-     - msks-server
-    restart: always
-
-  lounge:
-    container_name: lounge
-    image: mylounge # https://github.com/daGrevis/docker-thelounge
-    volumes:
-     - /etc/.lounge:/root/.lounge
+     - msks
+     - lounge
     restart: always
 
   rethink:
@@ -33,22 +25,21 @@ services:
      - ~/msks/rethink-data:/data
     restart: always
 
-  msks-server:
-    container_name: msks-server
-    image: msks-server
+  msks:
+    container_name: msks
+    image: msks
     links:
-      - rethink
-    ports:
-     - '3001:3001'
-    environment:
-      RETHINK_HOST: rethink
+     - rethink
+    volumes:
+     - ~/msks/config.toml:/usr/src/app/config.toml:ro
+     - ~/msks/build:/srv/msks:ro
+     - ~/msks/developerslv:/srv/developerslv:ro
     restart: always
 
-  msks-bot:
-    container_name: msks-bot
-    image: msks-bot
-    links:
-      - rethink
+  lounge:
+    container_name: lounge
+    image: mylounge # https://github.com/daGrevis/docker-thelounge
+    command: lounge start
     volumes:
-      - ~/msks/config.json:/usr/src/app/config.json:ro
+     - /etc/.lounge:/root/.lounge
     restart: always
