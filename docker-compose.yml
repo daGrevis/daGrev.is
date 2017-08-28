@@ -13,9 +13,20 @@ services:
     ports:
      - '80:80'
     links:
+     - glances
      - rethink
      - msks
      - lounge
+    restart: always
+
+  glances:
+    container_name: glances
+    image: docker.io/nicolargo/glances
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock:ro
+    pid: 'host'
+    environment:
+     - GLANCES_OPT=-w --disable-amps
     restart: always
 
   rethink:
