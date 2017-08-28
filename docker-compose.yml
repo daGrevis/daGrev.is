@@ -7,11 +7,14 @@ services:
     volumes:
      - /etc/daGrev.is/nginx.conf:/etc/nginx/nginx.conf:ro
      - /etc/daGrev.is/.htpasswd:/etc/nginx/.htpasswd:ro
+     - /etc/daGrev.is/certs:/etc/letsencrypt:ro
+     - /etc/daGrev.is/certs-data:/data/letsencrypt:ro
      - /srv/daGrev.is:/srv/daGrev.is:ro
      - ~/msks/build:/srv/msks:ro
      - ~/msks/developerslv:/srv/developerslv:ro
     ports:
-     - '80:80'
+     - 80:80
+     - 443:443
     links:
      - glances
      - rethink
