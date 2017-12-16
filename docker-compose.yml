@@ -67,6 +67,13 @@ services:
      - ~/msks/developerslv:/srv/developerslv:ro
     restart: always
 
+  bncr:
+    container_name: bncr
+    image: bncr
+    volumes:
+     - ~/bncr/config.toml:/usr/src/app/config.toml:ro
+    restart: always
+
   lounge:
     container_name: lounge
     image: mylounge # https://github.com/daGrevis/docker-thelounge
