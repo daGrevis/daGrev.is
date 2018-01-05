@@ -7,6 +7,7 @@ services:
     links:
       - msks
       - rethink
+      - znc
       - lounge
       - glances
     ports:
@@ -51,6 +52,15 @@ services:
     restart: always
     volumes:
       - "~/msks/elastic-data:/usr/share/elasticsearch/data"
+
+  znc:
+    container_name: znc
+    image: znc:slim
+    ports:
+      - "6697:6697"
+    restart: always
+    volumes:
+      - "/etc/znc-data:/znc-data"
 
   lounge:
     command: "lounge start"
