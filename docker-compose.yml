@@ -35,6 +35,13 @@ services:
       - "~/msks/build:/srv/msks:ro"
       - "~/msks/developerslv:/srv/developerslv:ro"
 
+  bncr:
+    container_name: bncr
+    image: bncr
+    restart: always
+    volumes:
+      - "~/bncr/config.toml:/usr/src/app/config.toml:ro"
+
   rethink:
     container_name: rethink
     image: rethinkdb
@@ -45,11 +52,16 @@ services:
   elastic:
     container_name: elastic
     environment:
-      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+      bootstrap.memory_lock: "true"
       http.host: "0.0.0.0"
       transport.host: "127.0.0.1"
-    image: "docker.elastic.co/elasticsearch/elasticsearch:5.5.2"
+    image: "docker.elastic.co/elasticsearch/elasticsearch-oss:6.1.0"
     restart: always
+    ulimits:
+      memlock:
+        hard: -1
+        soft: -1
     volumes:
       - "~/msks/elastic-data:/usr/share/elasticsearch/data"
 
